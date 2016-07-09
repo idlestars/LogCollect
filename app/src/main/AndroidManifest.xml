@@ -26,6 +26,10 @@
             android:label="@string/app_name"
             android:name="com.zcl.YuLanActivity" >
         </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.zcl.ProcessActivity" >
+        </activity>
     </application>
 
 </manifest>
