@@ -29,14 +29,10 @@ public class MainActivity extends Activity implements OnClickListener {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_main);
 
-		ImageView mylog = (ImageView) findViewById(R.id.iv_mylog);
-		ImageView myself = (ImageView) findViewById(R.id.iv_myself);
-		ImageView shouye = (ImageView) findViewById(R.id.iv_shouye);
-		ImageView meg = (ImageView) findViewById(R.id.iv_meg);
-		mylog.setOnClickListener(this);
-		myself.setOnClickListener(this);
-		shouye.setOnClickListener(this);
-		meg.setOnClickListener(this);
+		findViewById(R.id.iv_mylog).setOnClickListener(this);
+		findViewById(R.id.iv_myself).setOnClickListener(this);
+		findViewById(R.id.iv_shouye).setOnClickListener(this);
+		findViewById(R.id.iv_meg).setOnClickListener(this);
 
 		gallery = (Gallery) findViewById(R.id.gallery1);
 		gallery.setAdapter(new ImageGalleryAdapter(this));
@@ -53,15 +49,21 @@ public class MainActivity extends Activity implements OnClickListener {
 		fragmentTransaction.show(mFragments[0]).commit();
 	}
 
-
+	private View prevSelectedMenu;
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
+		if (prevSelectedMenu != null ) {
+			prevSelectedMenu.setSelected(false);
+		}
+		v.setSelected(true);
+		prevSelectedMenu = v;
+
 		fragmentTransaction = fragmentManager.beginTransaction()
 				.hide(mFragments[0]).hide(mFragments[1]).hide(mFragments[2])
 				.hide(mFragments[3]);
 		switch (v.getId()) {
 		case R.id.iv_shouye:
+
 			fragmentTransaction.show(mFragments[0]).commit();
 			break;
 		case R.id.iv_mylog:
@@ -73,7 +75,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		case R.id.iv_myself:
 			fragmentTransaction.show(mFragments[3]).commit();
 			break;
-
 		}
 	}
 

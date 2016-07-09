@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="txt_orange">#FFEB6100</color>
+    <color name="transparent">#00000000</color>
+    <color name="red">#FFFF0000</color>
+    <color name="gray">#ff333333</color>
+    <color name="whiteGray">#ffC9CACB</color>
+    <color name="sc_transparent_background">#00111111</color>
+
+    <color name="dialog_cell">#424242</color>
+    <color name="lastmsg_type">#909090</color>
+    <color name="unread_num_color">#ffffff</color>
+    <color name="niotification_hl">#3cb69d</color>
+
+    <color name="faq_normal_status">#999999</color>
+    <color name="faq_checked_status">#3cb69d</color>
+
+    <color name="view_background_color">#F5F1EE</color>
+    
+
+    <drawable name="white">#FFFFFFFF</drawable>
+
+    <color name="medicinebg_selected">#75cc66</color>
+
+    <color name="common_calendar_today_bg">#ffa200</color>
+    <color name="common_calendar_gray">#999999</color>
+    <color name="common_calendar_red">#FFFF0000</color>
+    <color name="common_calendar_blue">#4ba1ea</color>
+    <color name="common_calendar_black">#000000</color>
+    <color name="common_transparent">#00000000</color>
+    
+    <color name="staus_orange">#ed6542</color>
+    
+    
+    <!-- V2.1.8 统一颜色色值 -->
+	<color name="light_grey">#999999</color>	<!-- 统一使用的浅灰色 -->
+	<color name="dim_grey">#424242</color>	<!-- 统一使用的黑色 -->
+	
+	<!-- V3.0.0 系一颜色色值  -->
+	<color name="green">#29bd5d</color>	<!-- 统一使用的绿色 -->
+	<color name="grey">#CCCCCC</color>	<!-- 统一使用的灰色 -->
+	<color name="lightest_grey">#F5F5F5</color>	<!-- 统一使用的亮灰色 -->
+
+    <color name="possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+    <color name="result_text">#ff000000</color>
+    <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#cb000000</color>
+    <color name="viewfinder_frame">#ff4EEE94</color><!-- #ff0000ff -->
+    <color name="backgroud">#ffffffff</color>
+    <color name="title_tv_color">#ffffffff</color>
+    <color name="listview_item_pressed">#E5E5E5</color>
+	<color name="green_grey">#005C2B</color>	<!-- 统一使用的灰绿色   文字-->
+	
+	<color name="oyster_white">#FCFDF8</color>	<!-- 统一使用的乳白色 -->
+	
+	<color name="cardinal_red">#CC0000</color>	<!-- 统一使用的红色-->
+	<color name="orange_yellow">#FFCC00</color> <!-- 统一使用的橘黄色 -->
+    <color name="dark_green">#005c2b</color>	<!-- 统一使用的深绿色 -->
+    <color name="middle_green">#148d44</color>	<!-- 统一使用的深绿色 -->
+    <color name="light_green">#beebce</color>	<!-- 统一使用的淡绿色 -->
+    
+    <color name="light_grey_new">#DCDDD8</color> <!-- 统一使用的浅灰色 -->
+    <color name="light_black">#7a7a7a</color>
+    <color name="grey_light">#A3A3A3</color> <!-- 统一使用的浅灰色 -->
+    <color name="dark_grey_new">#D4D4D4</color> <!-- 统一使用的浅灰色 -->
+    <color name="light_red">#FF5C0A</color> <!-- 统一使用的浅灰色 -->
+    <color name="black_light">#5C5C5C</color> <!-- 统一使用的暗黑色 -->
+    <color name="black_text">#666666</color> <!-- 统一使用的暗黑色 -->
+
+    <!-- V3.6.0 系一颜色色值  -->
+    <color name="black_666666">#666666</color> <!-- 统一使用的暗黑色 -->
+    <color name="green_32bf63">#32bf63</color>
+    <color name="red_df5c4e">#df5c4e</color>
+    <color name="black_333333">#333333</color> <!-- 统一使用的暗黑色 -->
+    <color name="green_0ab400">#0ab400</color>
+    <color name="grey_eee">#eeeeee</color>
+    <color name="grey_f9f9f9">#f9f9f9</color>
+</resources>
