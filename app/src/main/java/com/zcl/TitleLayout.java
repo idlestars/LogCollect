@@ -14,7 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class TitleLayout extends FrameLayout implements OnClickListener {
-	
+
 	Intent intent;
 	public TitleLayout(Context context) {
 		super(context);
