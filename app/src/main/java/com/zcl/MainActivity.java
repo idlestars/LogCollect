@@ -8,15 +8,10 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Gallery;
-import android.widget.Toast;
-
-import java.util.Timer;
-import java.util.TimerTask;
 
 @SuppressWarnings("deprecation")
 public class MainActivity extends Activity implements OnClickListener {
@@ -25,7 +20,6 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Gallery gallery;
 	private View selectedMenu;
 	private int selectedFragment = 0;
-	private boolean kongzhi = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -88,32 +82,4 @@ public class MainActivity extends Activity implements OnClickListener {
 				.hide(mFragments[0]).hide(mFragments[1]).hide(mFragments[2])
 				.hide(mFragments[3]).commit();
 	}
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		// TODO Auto-generated method stub
-		if (keyCode == KeyEvent.KEYCODE_BACK) {
-			if (kongzhi == false) {
-				Toast.makeText(MainActivity.this, "再按一次退出",
-						Toast.LENGTH_SHORT).show();
-				kongzhi = true;
-				Timer timer = new Timer();
-				TimerTask task = new TimerTask() {
-
-					@Override
-					public void run() {
-						// TODO Auto-generated method stub
-						kongzhi = false;
-					}
-				};
-				timer.schedule(task, 2000);
-			} else {
-				finish();
-				System.exit(0);
-			}
-
-			return false;
-		}
-		return super.onKeyDown(keyCode, event);
-	}
-
 }
