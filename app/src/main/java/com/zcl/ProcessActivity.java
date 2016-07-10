@@ -6,9 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
 import android.view.Window;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.logcollec.R;
 
@@ -62,6 +65,14 @@ public class ProcessActivity extends Activity {
             adapter = new ArrayAdapter<String>(ProcessActivity.this, android.R.layout.simple_list_item_1, biandinggong);
             listView.setAdapter(adapter);
         }
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+            int position, long id) {
+                Toast.makeText(ProcessActivity.this, adapter.getItem(position),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
