@@ -21,8 +21,7 @@ public class BaseTitleLayout extends FrameLayout {
 	public BaseTitleLayout(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		LayoutInflater.from(context).inflate(R.layout.basetitle, this);
-		
 		    
-    }  
+    }
 
 }

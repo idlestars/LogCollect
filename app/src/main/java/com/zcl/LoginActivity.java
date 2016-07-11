@@ -43,6 +43,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
             public void onClick(View view) {
                 intent=new Intent(LoginActivity.this,RegisterActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         rempassword=(CheckBox) findViewById(R.id.cb_rempassword);

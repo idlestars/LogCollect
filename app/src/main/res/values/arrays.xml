@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="spinnername">add</string-array>
+    <string-array name="sp_biaoduan">
+        <item>辽西北供水工程二段一标</item>
+        <item>桓集四标 </item>
+        <item>新疆ABH</item>
+        <item>京沈客专</item>
+    </string-array>
+    <string-array name="sp_dongkou">
+        <item>0#</item>
+        <item>1# </item>
+        <item>2#</item>
+        <item>2丿#</item>
+        <item>3#</item>
+        <item>3丿#</item>
+    </string-array>
 </resources>

@@ -4,6 +4,7 @@ import com.example.logcollec.R;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +17,11 @@ import android.widget.Toast;
 public class TitleLayout extends FrameLayout implements OnClickListener {
 
 	Intent intent;
+	TextView biaoduan;
+	TextView dongkou;
+	ImageView yulan;
+	String bd;
+	String dk;
 	public TitleLayout(Context context) {
 		super(context);
 		// TODO Auto-generated constructor stub
@@ -29,11 +35,16 @@ public class TitleLayout extends FrameLayout implements OnClickListener {
 	public TitleLayout(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		LayoutInflater.from(context).inflate(R.layout.title, this);
-		TextView biaoduan=(TextView) findViewById(R.id.tv_biaoduan);
-		TextView dongkou=(TextView) findViewById(R.id.tv_dongkou);
-		ImageView yulan=(ImageView) findViewById(R.id.iv_yulan);
-		
-		yulan.setOnClickListener(this); 
+		biaoduan=(TextView) findViewById(R.id.tv_biaoduan);
+		dongkou=(TextView) findViewById(R.id.tv_dongkou);
+		yulan=(ImageView) findViewById(R.id.iv_yulan);
+		yulan.setOnClickListener(this);
+		SharedPreferences pref = getContext().getSharedPreferences("data",
+				getContext().MODE_PRIVATE);
+		bd = pref.getString("biaoduan", "");
+		dk = pref.getString("dongkou", "");
+		biaoduan.setText(bd);
+		dongkou.setText(dk);
 		
 	}
 

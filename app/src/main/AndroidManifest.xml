@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.zcl.MainActivity"
+            android:name="com.zcl.LoadActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,12 +23,24 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.zcl.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
             android:label="@string/app_name"
             android:name="com.zcl.YuLanActivity" >
         </activity>
         <activity
             android:label="@string/app_name"
             android:name="com.zcl.ProcessActivity" >
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.zcl.LoginActivity" >
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.zcl.RegisterActivity" >
         </activity>
     </application>
 
