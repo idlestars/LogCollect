@@ -14,4 +14,24 @@
         <item>3#</item>
         <item>3丿#</item>
     </string-array>
+    <string-array name="sp_unit">
+        <item>阿里巴巴</item>
+        <item>百度 </item>
+        <item>腾讯</item>
+        <item>360科技</item>
+        <item>网易</item>
+        <item>亚马逊</item>
+    </string-array>
+    <string-array name="sp_workface">
+        <item>上游</item>
+        <item>下游 </item>
+    </string-array>
+    <string-array name="sp_type">
+        <item>负责人</item>
+        <item>钻工 </item>
+        <item>混凝土工</item>
+        <item>电焊工</item>
+        <item>模板工</item>
+        <item>司机</item>
+    </string-array>
 </resources>

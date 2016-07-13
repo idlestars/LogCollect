@@ -1,4 +1,4 @@
-package com.zcl;
+package com.zcl.activity;
 
 
 import android.app.Activity;
@@ -14,7 +14,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import com.example.logcollec.R;
 

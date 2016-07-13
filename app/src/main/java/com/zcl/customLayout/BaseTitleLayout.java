@@ -1,4 +1,4 @@
-package com.zcl;
+package com.zcl.customLayout;
 
 import com.example.logcollec.R;
 

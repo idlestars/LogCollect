@@ -1,39 +1,37 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal" >
+    android:layout_height="match_parent">
 
     <fragment  
         android:id="@+id/fragement_main"  
-        android:name="com.zcl.MainFragment"  
-        android:layout_width="fill_parent"  
-        android:layout_height="fill_parent"/>  
+        android:name="com.zcl.fragment.MainFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
   
     <fragment  
         android:id="@+id/fragement_mylog"  
-        android:name="com.zcl.MyLogFragment"  
-        android:layout_width="fill_parent"  
-        android:layout_height="fill_parent" />  
+        android:name="com.zcl.fragment.MyLogFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
   
     <fragment  
         android:id="@+id/fragement_meg"  
-        android:name="com.zcl.MegFragment"  
-        android:layout_width="fill_parent"  
-        android:layout_height="fill_parent" />
+        android:name="com.zcl.fragment.MegFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
     <fragment  
         android:id="@+id/fragement_myself"  
-        android:name="com.zcl.MySelfFragment"  
-        android:layout_width="fill_parent"  
-        android:layout_height="fill_parent" />
-
-    <com.zcl.TitleLayout
+        android:name="com.zcl.fragment.MySelfFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <com.zcl.customLayout.TitleLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
-    </com.zcl.TitleLayout>
+    </com.zcl.customLayout.TitleLayout>
 
-    <com.zcl.BaseTitleLayout
+    <com.zcl.customLayout.BaseTitleLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
-    </com.zcl.BaseTitleLayout>
+    </com.zcl.customLayout.BaseTitleLayout>
 
 </FrameLayout>

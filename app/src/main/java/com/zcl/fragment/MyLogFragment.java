@@ -1,4 +1,4 @@
-package com.zcl;
+package com.zcl.fragment;
 
 
 import com.example.logcollec.R;

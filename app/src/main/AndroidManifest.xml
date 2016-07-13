@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.zcl.LoadActivity"
+            android:name="com.zcl.activity.LoadActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,24 +23,28 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.zcl.MainActivity"
+            android:name="com.zcl.activity.MainActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
             android:label="@string/app_name"
-            android:name="com.zcl.YuLanActivity" >
+            android:name="com.zcl.activity.YuLanActivity" >
         </activity>
         <activity
             android:label="@string/app_name"
-            android:name="com.zcl.ProcessActivity" >
+            android:name="com.zcl.activity.ProcessActivity" >
         </activity>
         <activity
             android:label="@string/app_name"
-            android:name="com.zcl.LoginActivity" >
+            android:name="com.zcl.activity.LoginActivity" >
         </activity>
         <activity
             android:label="@string/app_name"
-            android:name="com.zcl.RegisterActivity" >
+            android:name="com.zcl.activity.RegisterActivity" >
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.zcl.activity.AddStaffActivity" >
         </activity>
     </application>
 

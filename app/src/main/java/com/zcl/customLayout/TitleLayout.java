@@ -1,6 +1,7 @@
-package com.zcl;
+package com.zcl.customLayout;
 
 import com.example.logcollec.R;
+import com.zcl.activity.YuLanActivity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -19,9 +20,11 @@ public class TitleLayout extends FrameLayout implements OnClickListener {
 	Intent intent;
 	TextView biaoduan;
 	TextView dongkou;
+	TextView tv_name;
 	ImageView yulan;
 	String bd;
 	String dk;
+	String name;
 	public TitleLayout(Context context) {
 		super(context);
 		// TODO Auto-generated constructor stub
@@ -37,14 +40,17 @@ public class TitleLayout extends FrameLayout implements OnClickListener {
 		LayoutInflater.from(context).inflate(R.layout.title, this);
 		biaoduan=(TextView) findViewById(R.id.tv_biaoduan);
 		dongkou=(TextView) findViewById(R.id.tv_dongkou);
+		tv_name=(TextView) findViewById(R.id.tv_name);
 		yulan=(ImageView) findViewById(R.id.iv_yulan);
 		yulan.setOnClickListener(this);
 		SharedPreferences pref = getContext().getSharedPreferences("data",
 				getContext().MODE_PRIVATE);
 		bd = pref.getString("biaoduan", "");
 		dk = pref.getString("dongkou", "");
+		name = pref.getString("name", "");
 		biaoduan.setText(bd);
 		dongkou.setText(dk);
+		tv_name.setText(name);
 		
 	}
 

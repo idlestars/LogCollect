@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:stretchColumns="1"
+    android:orientation="vertical" >
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="添加人员"
+            android:textColor="@color/common_calendar_blue"
+            android:textSize="30dp"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="姓名:" />
+        <EditText
+            android:id="@+id/et_staffname"
+            android:layout_height="wrap_content"
+            android:hint="请输入姓名"
+            android:layout_column="1" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="年龄:" />
+        <EditText
+            android:id="@+id/et_staffage"
+            android:layout_height="wrap_content"
+            android:hint="年龄"
+            android:layout_column="1" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="联系方式:" />
+        <EditText
+            android:id="@+id/et_stafftel"
+            android:layout_height="wrap_content"
+            android:hint="联系方式"
+            android:layout_column="1" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="所属标段:" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_staffbiaoduan"
+            android:layout_column="1" />
+
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="所属洞口:" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_staffdongkou"
+            android:layout_column="1" />
+
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="所属单位:" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_staffunit"
+            android:layout_column="1" />
+
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="工作面:" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_stafworkface"
+            android:layout_column="1" />
+
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="工种:" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_staftype"
+            android:layout_column="1" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:text="提交"
+            android:id="@+id/b_submitperson"
+            android:layout_span="2" />
+    </TableRow>
+</TableLayout>

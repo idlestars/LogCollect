@@ -1,15 +1,13 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     android:orientation="horizontal" >
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="#7fffffff"
-        android:orientation="vertical" >
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
         <TextView
             android:id="@+id/tv_mymes"
             android:layout_width="match_parent"
@@ -17,6 +15,28 @@
             android:layout_gravity="center"
             android:gravity="center_vertical"
             android:text="个人信息" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#696969" />
+        <TextView
+            android:id="@+id/tv_mylog"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="我的日志" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#696969" />
+        <TextView
+            android:id="@+id/tv_mynews"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="我的动态" />
 
         <View
             android:layout_width="match_parent"
@@ -42,18 +62,5 @@
             android:layout_gravity="center"
             android:gravity="center_vertical"
             android:text="注销" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_gravity="center" />
-
-        <ListView
-            android:id="@+id/lv_myself"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-        </ListView>
-
-    </LinearLayout>
-
-</FrameLayout>
+        </LinearLayout>
+</LinearLayout>

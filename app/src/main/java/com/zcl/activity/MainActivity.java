@@ -1,7 +1,8 @@
-package com.zcl;
+package com.zcl.activity;
 
 
 import com.example.logcollec.R;
+import com.zcl.adapter.ImageGalleryAdapter;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -14,7 +15,6 @@ import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Gallery;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.util.Timer;
@@ -54,30 +54,8 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		hideAllFragments();
 		onClick(home);
-		initOnclick();//工序
 	}
 
-	private void initOnclick() {
-		/**
-		 * 工序
-		 * */
-		ImageView biandinggong= (ImageView) findViewById(R.id.iv_biandinggong);
-		ImageView diban= (ImageView) findViewById(R.id.iv_diban);
-		ImageView gangzhicheng= (ImageView) findViewById(R.id.iv_gangzhicheng);
-		ImageView gongjia= (ImageView) findViewById(R.id.iv_gongjia);
-		ImageView guanjiang= (ImageView) findViewById(R.id.iv_guanjiang);
-		ImageView maogan= (ImageView) findViewById(R.id.iv_maogan);
-		ImageView tbm= (ImageView) findViewById(R.id.iv_tbm);
-		ImageView rgzb= (ImageView) findViewById(R.id.iv_rgzb);
-		biandinggong.setOnClickListener(this);
-		diban.setOnClickListener(this);
-		gangzhicheng.setOnClickListener(this);
-		gongjia.setOnClickListener(this);
-		guanjiang.setOnClickListener(this);
-		maogan.setOnClickListener(this);
-		tbm.setOnClickListener(this);
-		rgzb.setOnClickListener(this);
-	}
 
 	@Override
 	public void onClick(View v) {
@@ -103,46 +81,6 @@ public class MainActivity extends Activity implements OnClickListener {
 				break;
 			case R.id.iv_myself:
 				selectedFragment = 3;
-				break;
-			case R.id.iv_biandinggong:
-				intent=new Intent(MainActivity.this,ProcessActivity.class);
-				intent.putExtra("extra_data", "biandinggong");//根据ID判断从哪个数据表取值
-				startActivity(intent);
-				break;
-			case R.id.iv_diban:
-				intent=new Intent(MainActivity.this,ProcessActivity.class);
-				intent.putExtra("extra_data", "diban");
-				startActivity(intent);
-				break;
-			case R.id.iv_gangzhicheng:
-				intent=new Intent(MainActivity.this,ProcessActivity.class);
-				intent.putExtra("extra_data", "gangzhicheng");
-				startActivity(intent);
-				break;
-			case R.id.iv_gongjia:
-				intent=new Intent(MainActivity.this,ProcessActivity.class);
-				intent.putExtra("extra_data", "gongjia");
-				startActivity(intent);
-				break;
-			case R.id.iv_guanjiang:
-				intent=new Intent(MainActivity.this,ProcessActivity.class);
-				intent.putExtra("extra_data", "guanjiang");
-				startActivity(intent);
-				break;
-			case R.id.iv_maogan:
-				intent=new Intent(MainActivity.this,ProcessActivity.class);
-				intent.putExtra("extra_data", "maogan");
-				startActivity(intent);
-				break;
-			case R.id.iv_tbm:
-				intent=new Intent(MainActivity.this,ProcessActivity.class);
-				intent.putExtra("extra_data", "tbm");
-				startActivity(intent);
-				break;
-			case R.id.iv_rgzb:
-				intent=new Intent(MainActivity.this,ProcessActivity.class);
-				intent.putExtra("extra_data", "rgzb");
-				startActivity(intent);
 				break;
 		}
 
