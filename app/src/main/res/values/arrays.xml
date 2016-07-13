@@ -7,12 +7,12 @@
         <item>京沈客专</item>
     </string-array>
     <string-array name="sp_dongkou">
-        <item>0#</item>
-        <item>1# </item>
-        <item>2#</item>
-        <item>2丿#</item>
-        <item>3#</item>
-        <item>3丿#</item>
+        <item>0#工区</item>
+        <item>1#工区 </item>
+        <item>2#工区</item>
+        <item>2丿#工区</item>
+        <item>3#工区</item>
+        <item>3丿#工区</item>
     </string-array>
     <string-array name="sp_unit">
         <item>阿里巴巴</item>
