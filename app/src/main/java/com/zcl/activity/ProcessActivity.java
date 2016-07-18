@@ -24,13 +24,14 @@ public class ProcessActivity extends Activity {
     ListView listView;
     ArrayAdapter<String> adapter;
     String data;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.process);
-        Intent intent = getIntent();
+        intent = getIntent();
         data = intent.getStringExtra("extra_data");
         listView = (ListView) findViewById(R.id.lv_process);
         if(data.equals("biandinggong")) {
@@ -65,13 +66,16 @@ public class ProcessActivity extends Activity {
             adapter = new ArrayAdapter<String>(ProcessActivity.this, android.R.layout.simple_list_item_1, biandinggong);
             listView.setAdapter(adapter);
         }
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-            int position, long id) {
-                Toast.makeText(ProcessActivity.this, adapter.getItem(position),
-                        Toast.LENGTH_SHORT).show();
-            }
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        intent = new Intent(ProcessActivity.this, CollectionActivity.class);
+                        intent.putExtra("col_data", adapter.getItem(i));
+                        intent.putExtra("col_xiangmu",data);
+                        System.out.println(adapter.getItem(i));
+                        startActivity(intent);
+                }
         });
 
     }
@@ -82,5 +86,4 @@ public class ProcessActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-
 }

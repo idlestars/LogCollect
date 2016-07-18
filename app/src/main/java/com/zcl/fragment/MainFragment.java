@@ -6,12 +6,19 @@ import com.zcl.activity.AddStaffActivity;
 import com.zcl.activity.MainActivity;
 import com.zcl.activity.ProcessActivity;
 import com.zcl.adapter.CompanyAdapter;
+import com.zcl.adapter.EmployeeAdapter;
+import com.zcl.adapter.EquipmentAdapter;
 import com.zcl.bean.CompanyBean;
+import com.zcl.bean.EmployeeBean;
+import com.zcl.bean.EquipmentBean;
+import com.zcl.transformer.RotateDownPageTransformer;
 
 import android.app.Fragment;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,7 +48,13 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     private List<Map<String, Object>> data_list;
     private SimpleAdapter sim_adapter;
     private CompanyAdapter companyAdapter;
-    private List<CompanyBean> comList;
+    private EmployeeAdapter employeeAdapter;
+    private EquipmentAdapter equipmentAdapter;
+    private List List;
+    private ViewPager mViewPager;
+    private PagerAdapter mAdapter;
+
+    private int[] imgRes = {R.drawable.a, R.drawable.b,R.drawable.c,R.drawable.d,R.drawable.e};
 
     private int[] icon = { R.drawable.biandinggong, R.drawable.diban,
             R.drawable.gangzhicheng, R.drawable.gongjia, R.drawable.guanjiang,
@@ -59,21 +72,91 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         iv_addcompany.setOnClickListener(this);
         iv_addperson.setOnClickListener(this);
         iv_addequitment.setOnClickListener(this);
+        /**
+         * viewpage
+         * */
+        mViewPager = (ViewPager) view.findViewById(R.id.vp_img);
+        //设置Page间间距
+        mViewPager.setPageMargin(10);
+        //设置缓存的页面数量
+        mViewPager.setOffscreenPageLimit(3);
+        mViewPager.setAdapter(mAdapter = new PagerAdapter()
+        {
+            @Override
+            public Object instantiateItem(ViewGroup container, int position)
+            {
+                ImageView view = new ImageView(getActivity());
+                view.setImageResource(imgRes[position]);
+                container.addView(view);
+                return view;
+            }
+
+            @Override
+            public void destroyItem(ViewGroup container, int position, Object object)
+            {
+                container.removeView((View) object);
+            }
+
+            @Override
+            public int getCount()
+            {
+                return imgRes.length;
+            }
+
+            @Override
+            public boolean isViewFromObject(View view, Object o)
+            {
+                return view == o;
+            }
+        });
+
+        mViewPager.setPageTransformer(true,new RotateDownPageTransformer());
 
         /**
          * company
          * */
-        comList = new ArrayList<CompanyBean>();
+        List = new ArrayList<CompanyBean>();
         CompanyBean companyBean=new CompanyBean("哇咔咔咔咔");
         CompanyBean companyBean1=new CompanyBean("我们都是小青蛙");
         CompanyBean companyBean2=new CompanyBean("百度影音");
-        comList.add(companyBean);
-        comList.add(companyBean1);
-        comList.add(companyBean2);
+        List.add(companyBean);
+        List.add(companyBean1);
+        List.add(companyBean2);
         companyAdapter = new CompanyAdapter(getActivity(),
-                R.layout.companyiteminfo, comList);
+                R.layout.companyiteminfo, List);
         ListView cplistview = (ListView) view.findViewById(R.id.lv_company);
         cplistview.setAdapter(companyAdapter);
+
+        /**
+         * employee
+         * */
+        List = new ArrayList<EmployeeBean>();
+        EmployeeBean emp1=new EmployeeBean("张三");
+        EmployeeBean emp2=new EmployeeBean("李四");
+        EmployeeBean emp3=new EmployeeBean("王五");
+        List.add(emp1);
+        List.add(emp2);
+        List.add(emp3);
+        employeeAdapter = new EmployeeAdapter(getActivity(),
+                R.layout.employeeiteminfo, List);
+        ListView emplistview = (ListView) view.findViewById(R.id.lv_renyuan);
+        emplistview.setAdapter(employeeAdapter);
+
+        /**
+         * equipment
+         * */
+        List = new ArrayList<EquipmentBean>();
+        EquipmentBean equ1=new EquipmentBean("挖掘机");
+        EquipmentBean equ2=new EquipmentBean("装载机");
+        EquipmentBean equ3=new EquipmentBean("叉车");
+        List.add(equ1);
+        List.add(equ2);
+        List.add(equ3);
+        equipmentAdapter = new EquipmentAdapter(getActivity(),
+                R.layout.equipmentiteminfo, List);
+        ListView equlistview = (ListView) view.findViewById(R.id.lv_shebei);
+        equlistview.setAdapter(equipmentAdapter);
+
         /**
          * xiangmu
          * */

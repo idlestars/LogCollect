@@ -46,6 +46,14 @@
             android:label="@string/app_name"
             android:name="com.zcl.activity.AddStaffActivity" >
         </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.zcl.activity.CollectionActivity" >
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name="com.zcl.activity.AuthorActivity" >
+        </activity>
     </application>
 
 </manifest>

@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="开发者：everhad and zcl" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#696969" />
+        <TextView
+            android:id="@+id/tv_mylog"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="如您有好的建议或发现漏洞，请联系我们" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#696969" />
+        <TextView
+            android:id="@+id/tv_mynews"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="QQ：503507976" />
+
+</LinearLayout>

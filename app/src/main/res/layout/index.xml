@@ -12,12 +12,23 @@
         android:layout_gravity="center"
         android:background="#7fffffff"
         android:orientation="vertical" >
-
-        <Gallery
-            android:id="@+id/gallery1"
+        <View
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:gravity="center_vertical" />
+            android:layout_height="100dip"
+            android:background="#696969" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_img"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:clipChildren="false"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            >
+        </android.support.v4.view.ViewPager>
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,7 +44,7 @@
                 android:layout_gravity="center"
                 android:gravity="center_vertical"
                 android:text="施工项目："
-                android:textSize="20dp" />
+                android:textSize="15dp" />
         </LinearLayout>
 
         <View
@@ -72,7 +83,7 @@
                 android:layout_gravity="left"
                 android:gravity="center_vertical"
                 android:text="分包商管理："
-                android:textSize="20dp" />
+                android:textSize="15dp" />
             <ImageView
                 android:id="@+id/iv_addcompany"
                 android:layout_width="30dp"
@@ -94,7 +105,7 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="20dp"
                 android:layout_gravity="center" />
         </LinearLayout>
 
@@ -116,7 +127,7 @@
                 android:layout_gravity="left"
                 android:gravity="center_vertical"
                 android:text="人员管理："
-                android:textSize="20dp" />
+                android:textSize="15dp" />
             <ImageView
                 android:id="@+id/iv_addperson"
                 android:layout_width="30dp"
@@ -130,15 +141,15 @@
                 android:layout_height="2dip"
                 android:background="#696969" />
 
-            <ListView
+            <com.zcl.customLayout.MyListView
                 android:id="@+id/lv_renyuan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
-            </ListView>
+            </com.zcl.customLayout.MyListView>
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="20dp"
                 android:layout_gravity="center" />
         </LinearLayout>
 
@@ -159,7 +170,7 @@
                 android:layout_height="30dp"
                 android:layout_gravity="left"
                 android:text="设备管理："
-                android:textSize="20dp" />
+                android:textSize="15dp" />
             <ImageView
                 android:id="@+id/iv_addequitment"
                 android:layout_width="30dp"
@@ -172,16 +183,12 @@
                 android:layout_height="2dip"
                 android:background="#696969" />
 
-            <ListView
+            <com.zcl.customLayout.MyListView
                 android:id="@+id/lv_shebei"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
-            </ListView>
+            </com.zcl.customLayout.MyListView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_gravity="center" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

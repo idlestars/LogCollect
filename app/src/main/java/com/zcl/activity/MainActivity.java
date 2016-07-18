@@ -42,9 +42,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		home.setOnClickListener(this);
 		findViewById(R.id.iv_meg).setOnClickListener(this);
 
-		gallery = (Gallery) findViewById(R.id.gallery1);
-		gallery.setAdapter(new ImageGalleryAdapter(this));
-
 		mFragments = new Fragment[4];
 		fragmentManager = getFragmentManager();
 		mFragments[0] = fragmentManager.findFragmentById(R.id.fragement_main);

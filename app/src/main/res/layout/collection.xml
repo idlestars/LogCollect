@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:stretchColumns="1">
+
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="项目名称："
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="1dp"
+            android:layout_gravity="center"
+            android:textSize="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="工序名称"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_span="2"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_colpro" />
+
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="工序名称："
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="1dp"
+            android:layout_gravity="center"
+            android:textSize="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="工序名称"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_span="2"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_colgongxu" />
+
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="桩        号："
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="1dp"
+            android:layout_gravity="center"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_colnum"
+            android:hint="请输入桩号"
+            android:gravity="center"
+            android:layout_span="2"/>
+
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="起始时间："
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_gravity="center"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_span="2"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_colentertime" />
+
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="离场时间："
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_gravity="center"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="准备施工....."
+            android:textSize="20dp"
+            android:layout_span="2"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_colofftime" />
+
+    </TableRow>
+    <TableRow android:shrinkColumns="1"
+              android:stretchColumns="2">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="施工人员："
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_gravity="center"
+            android:textSize="20dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加"
+            android:id="@+id/b_coladdemp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除"
+            android:id="@+id/b_coldelemp" />
+    </TableRow>
+    <com.zcl.customLayout.MyListView
+        android:id="@+id/lv_colemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:clipChildren="false"
+        android:layout_gravity="center">
+    </com.zcl.customLayout.MyListView>
+
+    <TableRow android:shrinkColumns="1"
+              android:stretchColumns="2">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="施工设备："
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_gravity="center"
+            android:textSize="20dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加"
+            android:id="@+id/b_coladdequ" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除"
+            android:id="@+id/b_coldelequ" />
+    </TableRow>
+    <com.zcl.customLayout.MyListView
+        android:id="@+id/lv_colequ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:clipChildren="false"
+        android:layout_gravity="center">
+    </com.zcl.customLayout.MyListView>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交"
+            android:id="@+id/b_colsubmit"
+            android:layout_span="3" />
+    </TableRow>
+
+</TableLayout>
